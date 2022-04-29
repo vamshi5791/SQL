@@ -1,0 +1,28 @@
+create table seller1(sid int primary key,sname varchar(30),scontact numeric(9,0));
+
+insert into seller1 values(1,'vamshi',987657)
+insert into seller1 values(2,'krish',12345);
+insert into seller1 values(3,'meghana',56789);
+
+select * from seller1
+
+create table product1(pid int foreign key references seller1(sid),pname varchar(20),pmake varchar(20),pmodel varchar(20));
+
+insert into product1 values(1,'nikhil','phone','2020');
+
+select s.sid,s.sname from seller1 as s right outer join product1 as p
+                        on s.sid=p.pid
+                        where s.sid is null
+                        
+select s.sid,s.sname from seller1 as s left outer join product1 as p
+                        on s.sid=p.pid
+                        where p.pid is null
+
+
+
+
+
+
+
+
+

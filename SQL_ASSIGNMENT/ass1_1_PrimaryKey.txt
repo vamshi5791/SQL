@@ -1,0 +1,2 @@
+create table Product(id int, name varchar(30), manufacturer varchar(30),description varchar(50), stock_numbers int,
+constraint p_pk primary key(name, manufacturer));

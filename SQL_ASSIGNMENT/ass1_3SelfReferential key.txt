@@ -1,0 +1,12 @@
+create table employee(id int primary key,name varchar(20),mgr_id int references employee(id));
+
+ insert into employee(id,name) values(1,'vamshi');
+  insert into employee(id,name)values(2,'kiran');
+  insert into employee(id,name)values(3,'krishna');
+  insert into employee(id,name)values(4,'mahesh');
+
+ insert into employee values(5,'virat',1);
+
+ insert into employee values(6,'dhoni',3);
+
+ select * from employee
